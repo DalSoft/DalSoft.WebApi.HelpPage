@@ -1,0 +1,37 @@
+﻿@using System.Net.Http.Headers
+@using DalSoft.WebApi.HelpPage.SampleGeneration
+@model IDictionary<MediaTypeHeaderValue, object>
+
+@{
+    // Group the samples into a single tab if they are the same.
+    var samples = Model.GroupBy(x => x.Value).ToDictionary(x => string.Join(", ", x.Select(m => m.Key.ToString()).ToArray()), x => x.Key);
+    var mediaTypes = samples.Keys;
+}
+<div>
+    @{
+        foreach (var mediaType in mediaTypes)
+        {
+            <h4 class="sample-header">@mediaType</h4>
+            <div class="sample-content">
+                <span><b>Sample:</b></span>
+                @{ var sample = samples[mediaType]; }
+                @if (sample == null)
+                {
+                    <p>Sample not available.</p>
+                }
+                else if (sample is TextSample)
+                {
+                    <pre class="wrapped">@(((TextSample)sample).Text)</pre>
+                }
+                else if (sample is ImageSample)
+                {
+                    <img src="@(((ImageSample)sample).Src)"/>
+                }
+                else if (sample is InvalidSample)
+                {
+                    <div class="warning-message-container">@(((InvalidSample)sample).ErrorMessage)</div>
+                    }
+            </div>
+        }
+    }
+</div>

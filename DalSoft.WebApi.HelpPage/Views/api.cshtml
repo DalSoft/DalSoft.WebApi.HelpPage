@@ -1,0 +1,28 @@
+﻿@using DalSoft.WebApi.HelpPage.Models
+@model HelpPageApiModel
+
+@{
+    var description = Model.ApiDescription;
+    var title = description.HttpMethod.Method + " " + description.RelativePath;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@title</title>
+    <link type="text/css" href="/help/HelpPage.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="body">
+        <section class="featured">
+            <div class="content-wrapper">
+                <p>
+                    <a href="/help">Help Page Home</a>
+                </p>
+            </div>
+        </section>
+        <section class="content-wrapper main-content clear-fix">
+            @Include("HelpPageApiModel.cshtml", Model, typeof(HelpPageApiModel))
+        </section>
+    </div>
+</body>
+</html>
