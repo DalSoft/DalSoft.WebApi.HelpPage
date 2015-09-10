@@ -7,8 +7,8 @@
     <ProjectGuid>{01061C90-87E6-43CA-AA99-19385B920411}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DalSoft.WebApi.HelpPage.Sample</RootNamespace>
-    <AssemblyName>DalSoft.WebApi.HelpPage.Sample</AssemblyName>
+    <RootNamespace>DalSoft.WebApi.HelpPage.Example.SelfHost</RootNamespace>
+    <AssemblyName>DalSoft.WebApi.HelpPage.Example.SelfHost</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -39,7 +39,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\DalSoft.WebApi.HelpPage.Sample.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\DalSoft.WebApi.HelpPage.Example.SelfHost.xml</DocumentationFile>
     <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -50,6 +50,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\DalSoft.WebApi.HelpPage.Example.SelfHost.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -98,7 +100,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="HelpPageConfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -106,7 +107,28 @@
     <Compile Include="ValuesController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MyViews\HelpPage.css">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
+    <Content Include="MyViews\api.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MyViews\DisplayTemplates\ApiGroup.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MyViews\DisplayTemplates\HelpPageApiModel.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MyViews\DisplayTemplates\Parameters.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MyViews\DisplayTemplates\Samples.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MyViews\index.cshtml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -127,12 +149,11 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DalSoft.WebApi.HelpPage\DalSoft.WebApi.HelpPage.csproj">
+    <ProjectReference Include="..\..\DalSoft.WebApi.HelpPage\DalSoft.WebApi.HelpPage.csproj">
       <Project>{a8268208-4984-4732-9acd-97ce4a0b2f7d}</Project>
       <Name>DalSoft.WebApi.HelpPage</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

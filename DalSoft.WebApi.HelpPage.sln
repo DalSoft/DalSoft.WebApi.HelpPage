@@ -12,7 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{21AD2B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalSoft.WebApi.HelpPage", "DalSoft.WebApi.HelpPage\DalSoft.WebApi.HelpPage.csproj", "{A8268208-4984-4732-9ACD-97CE4A0B2F7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalSoft.WebApi.HelpPage.Sample", "DalSoft.WebApi.HelpPage.Sample\DalSoft.WebApi.HelpPage.Sample.csproj", "{01061C90-87E6-43CA-AA99-19385B920411}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalSoft.WebApi.HelpPage.Example.SelfHost", "Examples\DalSoft.WebApi.HelpPage.Example.SelfHost\DalSoft.WebApi.HelpPage.Example.SelfHost.csproj", "{01061C90-87E6-43CA-AA99-19385B920411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DalSoft.WebApi.HelpPage.Sample.SystemWeb", "Examples\DalSoft.WebApi.HelpPage.Example.SystemWeb\DalSoft.WebApi.HelpPage.Sample.SystemWeb.csproj", "{CF24D5B2-C30B-47FF-8A9F-F849F0168C22}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{3867B0CF-22C3-4F73-A79D-EB3837547B19}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,8 +32,16 @@ Global
 		{01061C90-87E6-43CA-AA99-19385B920411}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01061C90-87E6-43CA-AA99-19385B920411}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01061C90-87E6-43CA-AA99-19385B920411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF24D5B2-C30B-47FF-8A9F-F849F0168C22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF24D5B2-C30B-47FF-8A9F-F849F0168C22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF24D5B2-C30B-47FF-8A9F-F849F0168C22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF24D5B2-C30B-47FF-8A9F-F849F0168C22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{01061C90-87E6-43CA-AA99-19385B920411} = {3867B0CF-22C3-4F73-A79D-EB3837547B19}
+		{CF24D5B2-C30B-47FF-8A9F-F849F0168C22} = {3867B0CF-22C3-4F73-A79D-EB3837547B19}
 	EndGlobalSection
 EndGlobal

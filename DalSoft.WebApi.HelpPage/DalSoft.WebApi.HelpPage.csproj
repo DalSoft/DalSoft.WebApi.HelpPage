@@ -33,7 +33,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
@@ -102,27 +102,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Views\api.cshtml">
+    <Content Include="Help\DalSoft.WebApi.HelpPage.Views\api.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\DisplayTemplates\ApiGroup.cshtml">
+    <Content Include="Help\DalSoft.WebApi.HelpPage.Views\DisplayTemplates\ApiGroup.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\DisplayTemplates\HelpPageApiModel.cshtml">
+    <Content Include="Help\DalSoft.WebApi.HelpPage.Views\DisplayTemplates\HelpPageApiModel.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\DisplayTemplates\Parameters.cshtml">
+    <Content Include="Help\DalSoft.WebApi.HelpPage.Views\DisplayTemplates\Parameters.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\DisplayTemplates\Samples.cshtml">
+    <Content Include="Help\DalSoft.WebApi.HelpPage.Views\DisplayTemplates\Samples.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Views\index.cshtml">
+    <Content Include="Help\DalSoft.WebApi.HelpPage.Views\index.cshtml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\HelpPage.css">
+    <Content Include="Help\DalSoft.WebApi.HelpPage.Views\HelpPage.css">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -1,10 +1,12 @@
-﻿using System.Linq;
+﻿using System.IO;
+using System.Linq;
+using System.Reflection;
 using System.Web.Http;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Owin;
 
-namespace DalSoft.WebApi.HelpPage.Sample
+namespace DalSoft.WebApi.HelpPage.Sample.SystemWeb
 {
     public class Startup
     {
@@ -29,9 +31,11 @@ namespace DalSoft.WebApi.HelpPage.Sample
             
             // WebApi
             app.UseWebApi(config);
-            
+
+            var viewsPhysicalPath = HelpPageMiddlewareExtensions.GetBinPath() + "\\MyViews";
+
             // WebApi HelpPage
-            app.UseWebApiHelpPage(config);
+           app.UseWebApiHelpPage(config, "myhelp", viewsPhysicalPath: viewsPhysicalPath, viewBag: new { Darran = "Darran"});
         }
     }
 

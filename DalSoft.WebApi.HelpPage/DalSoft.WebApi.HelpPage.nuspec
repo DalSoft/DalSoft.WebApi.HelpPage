@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://github.com/DalSoft/DalSoft.WebApi.HelpPage/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/DalSoft/DalSoft.WebApi.HelpPage</projectUrl>
+    <!-- <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl> -->
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Owin Middleware to generate WebApi help pages without dependencies on MVC or System.Web. Great for self hosted WebApi.  Razor is used for the documentation templates to make it easy to customize. Based on Yao's example http://goo.gl/0YMkKq</description>
+    <releaseNotes>First release be gentle.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <tags>WebApi Web Api Help Owin SelfHost</tags>
+  </metadata>
+  <files>
+    <file src="tools\*.ps1" target="tools" /> 
+  </files>
+</package>

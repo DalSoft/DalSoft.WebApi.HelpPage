@@ -1,6 +1,6 @@
 ﻿using System.Web.Http;
 
-namespace DalSoft.WebApi.HelpPage.Sample
+namespace DalSoft.WebApi.HelpPage.Example.SelfHost
 {
     public class UserController : ApiController
     {
