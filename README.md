@@ -1,6 +1,6 @@
 # DalSoft.WebApi.HelpPage
 
-Want to understand the background of why this exists? Head over my blog post on using Web API Help pages with Owin.
+Want to understand the background of why this exists? [Head over my blog post on using Web API Help pages with Owin](http://www.dalsoft.co.uk/blog/index.php/2016/01/13/introducing-dalsoft-webapi-helppage-help-pages-for-asp-net-web-api-working-on-owin-self-host/).
 
 ## Getting Started
 
